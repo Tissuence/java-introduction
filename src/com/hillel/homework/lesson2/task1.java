@@ -4,15 +4,19 @@ public class task1 {
 
     public static void main(String[] args) {
 
-        byte a = 10;
+        int a = 60;
         System.out.println("a = " + a);
 
-        byte b = 20;
+        int b = 28;
         System.out.println("b = " + b);
 
+        int c = a + b;
+        a = c - a;
+        b = c - b;
+
         System.out.println();
-        System.out.println("a = " + b);
-        System.out.println("b = " + a);
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
     }
 }
 
