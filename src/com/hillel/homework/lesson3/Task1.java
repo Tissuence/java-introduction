@@ -1,6 +1,6 @@
 package com.hillel.homework.lesson3;
 
-public class task1 {
+public class Task1 {
     public static void main(String[] args) {
      //Дано
         float r1 = 1;
@@ -22,9 +22,9 @@ public class task1 {
 
 //Первый шар:
         double y = (4.0 / 3.0);
-        double a = (Math.PI*r1);
+        double PI = Math.PI;
 
-        float V1 = (float) (y * (Math.pow(a, 3)));
+        float V1 = (float) (y * PI * (Math.pow(r1, 3)));
         System.out.println("V1 = " + Math.round(V1) +" m" + x);
 
         float m1 = p * V1;
@@ -32,29 +32,31 @@ public class task1 {
         System.out.println();
 
 //Второй шар:
-        double b = (Math.PI*r2);
 
-        float V2 = (float) (y * (Math.pow(b, 3)));
+        float V2 = (float) (y * PI * (Math.pow(r2, 3)));
         System.out.println("V2 = " + Math.round(V2) +" m" + x);
 
         float m2 = p * V2;
-        System.out.println("M2 = " + Math.round(m2) + " kg");
+        System.out.print("m2 = "); System.out.printf("%.3f",m2);
+        System.out.print(" kg");
+        System.out.println();
         System.out.println();
 
-//Третий шар:
-        double c = (Math.PI*r3);
+//Третий шар: System.out.printf("%.3f",value)
 
-        float V3 = (float) (y * (Math.pow(c, 3)));
-        System.out.println("V3 = " + V3 +" m" + x);
+        float V3 = (float) (y * PI * (Math.pow(r3, 3)));
+        System.out.print("V3 = "); System.out.printf("%.3f",V3);
+        System.out.print(" m" + x);
+        System.out.println();
 
         float m3 = p * V3;
-        System.out.println("M3 = " + m3 + " kg");
+        System.out.print("m3 = "); System.out.printf("%.3f",m3);
+        System.out.print(" kg");
+        System.out.println();
 
-        /* данные третьего шара не округляла, так округляет до целого,
-        а по методу из интернета округлить до нескольких знаков после запятой не получилось( */
 
         double m = m1 + m2 + m3;
-        System.out.println("The snowman's weight is " + Math.round(m) + " kg" );
+        System.out.println("Answer: The snowman's weight is " + Math.round(m) + " kg" );
 
 
 
