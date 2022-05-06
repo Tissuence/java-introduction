@@ -24,7 +24,7 @@ public class WarmUp {
         System.out.println(" Sum of salary of all employees wihout tax  for 10 years: = " + sumFor10yearWithoutTax + " uah");
         System.out.println();
 
-       float tax5percent = 0.05f;
+        float tax5percent = 0.05f;
         float tax1employeer = salaryEmployeer1 * tax5percent;
         float salaryWithoutTax1 = salaryEmployeer1 - tax1employeer;
         System.out.println("Employeer's #1 salary without tax for 10 years = " + salaryWithoutTax1 + " uah");
@@ -40,14 +40,6 @@ public class WarmUp {
 
         float averageSalary = sumFor10yearWithoutTax / 120 / 3;
         System.out.println("Average Salary without Tax for 10 years = " + averageSalary + " uah");
-
-
-
-
-
-
-
-
 
 
     }

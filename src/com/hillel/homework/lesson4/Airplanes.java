@@ -11,18 +11,20 @@ public class Airplanes {
 
     }
 
-    public static void printAirplaneInfo(String name, String type){
-        System.out.println("Тип літака: " + name + ", модель: " + type);}
-
-    public static void printAirplaneInfo(String name, String type, int econom){
-        System.out.println("Тип літака: " + name + ", модель: " + type + ", Кількість пасажирів економ класу:  " + econom);}
-
-    public static void printAirplaneInfo(String name, String type, int econom, int business){
-        System.out.println("Тип літака: " + name + ", модель: " + type + ", Кількість пасажирів економ класу:  " + econom + ", Кількість пасажирів бізнес класу:  " + business);}
-
-
-
+    public static void printAirplaneInfo(String name, String type) {
+        System.out.println("Тип літака: " + name + ", модель: " + type);
     }
+
+    public static void printAirplaneInfo(String name, String type, int econom) {
+        System.out.println("Тип літака: " + name + ", модель: " + type + ", Кількість пасажирів економ класу:  " + econom);
+    }
+
+    public static void printAirplaneInfo(String name, String type, int econom, int business) {
+        System.out.println("Тип літака: " + name + ", модель: " + type + ", Кількість пасажирів економ класу:  " + econom + ", Кількість пасажирів бізнес класу:  " + business);
+    }
+
+
+}
 
 
 

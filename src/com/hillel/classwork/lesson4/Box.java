@@ -11,14 +11,14 @@ public class Box {
         int lenght = scanner.nextInt();
         int width = scanner.nextInt();
         int depth = scanner.nextInt();
-        int volume = calculateVolume(lenght,width,depth);
+        int volume = calculateVolume(lenght, width, depth);
         System.out.println("Volume = " + volume);
 
-        System.out.println("Volume = " +   calculateVolume(5,5,5));
+        System.out.println("Volume = " + calculateVolume(5, 5, 5));
 
     }
 
-    public static int calculateVolume (int lenght, int width, int depth){
-        return  lenght * width * depth;
+    public static int calculateVolume(int lenght, int width, int depth) {
+        return lenght * width * depth;
     }
 }
