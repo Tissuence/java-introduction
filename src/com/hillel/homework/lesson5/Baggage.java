@@ -20,18 +20,25 @@ public class Baggage {
         System.out.println("Enter Depth:");
         int depth = Integer.parseInt(reader.readLine());
 
-        isBaggageHand(height, width, depth);
+        String message = " take your baggage to the cabin.";
 
-    }
-
-
-    public static void isBaggageHand(int height, int width, int depth) {
-        if (height <= 40 && width <= 55 && depth <= 20 || height <= 53 && width <= 40 && depth <= 22) {
-            System.out.println("All's right, you can take your baggage to the cabin.");
-            return;
+        if (isBaggageHand(height, width, depth)) {
+            message = "All's right, you can" + message;
+        } else {
+            message = "I'm sorry, you can't" + message;
         }
-        System.out.println("I'm sorry, you can't take your baggage to the cabin.");
-
+        System.out.println(message);
     }
 
+    public static boolean isBaggageHand(int height, int width, int depth) {
+        if (height <= 40 && width <= 55 && depth <= 20 || height <= 53 && width <= 40 && depth <= 22) {
+
+            return true;
+        } else {
+            return false;
+
+        }
+
+
+    }
 }
