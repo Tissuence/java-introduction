@@ -16,30 +16,49 @@ public class Student {
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("enter an assessment 'Math': ");
+        System.out.println("enter a mark 'Math': ");
         int math = Integer.parseInt(reader.readLine());
 
-        if (isAssessmentValid(math)) {
-            System.out.println();
-        } else {
-            System.out.println("Incorrect data!");
-            return;
-        }
-
-        System.out.println("enter an assessment 'Geography': ");
+        System.out.println("enter a mark  'Geography': ");
         int geography = Integer.parseInt(reader.readLine());
 
-        System.out.println("enter an assessment 'Native Language': ");
+        System.out.println("enter a mark  'Native Language': ");
         int language = Integer.parseInt(reader.readLine());
 
-        System.out.println("enter an assessment 'History': ");
+        System.out.println("enter a mark  'History': ");
         int history = Integer.parseInt(reader.readLine());
 
-        System.out.println("enter an assessment 'Chemistry': ");
+        System.out.println("enter a mark  'Chemistry': ");
         int chemistry = Integer.parseInt(reader.readLine());
 
-        double average = averageAssessment(math, geography, language, history, chemistry);
-        System.out.println("Your Average Assessment is: " + average);
+
+        if (isMarkValid(math, geography, language, history, chemistry)) {
+
+            double average = averageMark(math, geography, language, history, chemistry);
+            System.out.println("Your Average Mark is: " + average);
+            calculateScholarship(average);
+        } else {
+            System.out.println("Incorrect data!");
+        }
+
+    }
+
+    public static boolean isMarkValid(int math, int geography, int language, int history, int chemistry) {
+        if (math > 0 && math <= 12 && geography > 0 && geography <= 12 && language > 0 &&
+                language <= 12 && history > 0 && history <= 12 && chemistry > 0 && chemistry <= 12) {
+            return true;
+        }
+        return false;
+
+    }
+
+    public static double averageMark(int math, int geography, int language, int history, int chemistry) {
+        double average = (double) (math + geography + language + history + chemistry) / 5;
+        return average;
+    }
+
+
+    private static void calculateScholarship(double average) {
 
         if (average >= 10 && average <= 12) {
             System.out.println("You have got increased grants");
@@ -49,23 +68,7 @@ public class Student {
             System.out.println("You don't have got any grants");
         } else
             System.out.println("Incorrect data!");
-
     }
 
-
-    public static double averageAssessment(int math, int geography, int language, int history, int chemistry) {
-        double average = (double) (math + geography + language + history + chemistry) / 5;
-        return average;
-    }
-
-    public static boolean isAssessmentValid(int assessment) {
-        if (assessment >= 0 && assessment <= 12) ;
-        return true;
-    } //else
-
-    {
-       // return false;
-
-    }
 
 }
