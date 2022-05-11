@@ -30,24 +30,24 @@ public class ApplesInJar {
             System.out.println("Incorrect data");
             return;
         }
-            distributeApples(apples, 5, "Big jars: ");
-            distributeApples(rest1, 3, "Medium jars: ");
-            distributeApples(rest2, 1, "Small jars: ");
-
-        }
-
-
-        public static int distributeApples ( int apples, int divider, String message){
-            int rest = apples % divider;
-            if (apples % divider != 0) {
-                int result = rest / divider;
-            }
-            int result = apples / divider;
-            System.out.println(message + result);
-            return result;
-        }
-
+        distributeApples(apples, 5, "Big jars: ");
+        distributeApples(rest1, 3, "Medium jars: ");
+        distributeApples(rest2, 1, "Small jars: ");
 
     }
+
+
+    public static int distributeApples(int apples, int divider, String message) {
+        int rest = apples % divider;
+        if (apples % divider != 0) {
+            int result = rest / divider;
+        }
+        int result = apples / divider;
+        System.out.println(message + result);
+        return result;
+    }
+
+
+}
 
 
