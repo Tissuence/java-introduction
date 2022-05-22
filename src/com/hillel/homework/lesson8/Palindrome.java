@@ -17,8 +17,6 @@ public class Palindrome {
         String inputTextWithoutTabSymbols = inputTextWithoutTab.replaceAll("(?U)[^\\p{L}\\p{N}\\s]+", "");
         System.out.println(inputTextWithoutTabSymbols);
         char[] charArray = inputTextWithoutTabSymbols.toCharArray();
-        System.out.println(Arrays.toString(charArray));
-
 
         if (isItPalindrome(charArray)) {
             System.out.println("It's a palindrome");
@@ -29,9 +27,10 @@ public class Palindrome {
 
     public static boolean isItPalindrome(char[] symbols) {
         for (int i = 0, j = symbols.length - 1; i < symbols.length && j > 0 ; i++, j--) {
-            if (symbols[i] == (symbols[j])) {
-            } else {
+            if (symbols[i] != (symbols[j])) {
                 return false;
+            } else {
+                return true;
             }
         }
         return true;

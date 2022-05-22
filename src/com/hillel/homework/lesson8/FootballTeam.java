@@ -1,18 +1,17 @@
 package com.hillel.homework.lesson8;
 
-import java.util.Arrays;
-
 public class FootballTeam {
 
     public static void main(String[] args) {
 
         int maxAge = 45;
         int minAge = 18;
+        int numberOfPlayers = 11;
 
-        int[] firstFootballTeamAges = createAndFillFootballTeam(11, maxAge, minAge);
-        int[] secondFootballTeamAges = createAndFillFootballTeam(11, maxAge, minAge);
+        int[] firstFootballTeamAges = createAndFillFootballTeam(numberOfPlayers, maxAge, minAge);
+        int[] secondFootballTeamAges = createAndFillFootballTeam(numberOfPlayers, maxAge, minAge);
 
-        System.out.print("Ages of the First Team: ");
+        System.out.println("Ages of the First Team: ");
         printAllAges(firstFootballTeamAges);
         System.out.println();
         System.out.print("Ages of the Second Team: ");
@@ -20,7 +19,7 @@ public class FootballTeam {
 
         System.out.println();
 
-        if (AverageAge(firstFootballTeamAges) > AverageAge(secondFootballTeamAges)) {
+        if (averageAge(firstFootballTeamAges) > averageAge(secondFootballTeamAges)) {
             System.out.println(" The average age of the First team is higher");
         }
             System.out.println(" The average age of the Second team is higher");
@@ -44,7 +43,7 @@ public class FootballTeam {
         }
     }
 
-    public static int AverageAge(int[] footballTeamAges) {
+    public static int averageAge(int[] footballTeamAges) {
         int sum = 0;
 
         for (int age : footballTeamAges) {
