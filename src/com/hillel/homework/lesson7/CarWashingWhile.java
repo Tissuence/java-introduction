@@ -15,34 +15,25 @@ public class CarWashingWhile {
             System.out.println("Incorrect data!");
 
         }
-        soapCar(quantityOfTheCars);
-        washCar(quantityOfTheCars);
-        dryCar(quantityOfTheCars);
+        while (quantityOfTheCars != 0) {
+            quantityOfTheCars--;
+            soapCar(quantityOfTheCars);
+            washCar(quantityOfTheCars);
+            dryCar(quantityOfTheCars);
 
+        }
     }
 
     public static void soapCar(int quantityOfTheCars) {
-        int i = 1;
-        while (i < quantityOfTheCars) {
-            i++;
-            System.out.println(" Wow, " + i + " cars successfully soaped!");
-        }
+        System.out.println(" Wow, " + (quantityOfTheCars + 1) + " car successfully soaped!");
     }
 
     public static void washCar(int quantityOfTheCars) {
-        int i = 1;
-        while (i < quantityOfTheCars) {
-            i++;
-            System.out.println(" Okay, " + i + " cars successfully washed!");
-        }
+        System.out.println(" Okay, " + (quantityOfTheCars + 1) + " car successfully washed!");
     }
 
     public static void dryCar(int quantityOfTheCars) {
-        int i = 1;
-        while (i < quantityOfTheCars) {
-            i++;
-            System.out.println(" Great, " + i + " cars successfully dried!");
-        }
-
+        System.out.println(" Great, " + (quantityOfTheCars + 1) + " car successfully dried!");
     }
+
 }
