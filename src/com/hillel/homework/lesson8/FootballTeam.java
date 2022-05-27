@@ -32,6 +32,8 @@ public class FootballTeam {
         }
     }
 
+
+
     public static int[] createAndFillFootballTeam(int size, int maxAge, int minAge) {
 
         int[] footballTeamAges = new int[size];
@@ -53,7 +55,7 @@ public class FootballTeam {
         for (int age : footballTeamAges) {
             sum += age;
         }
-        double result = (double) sum / footballTeamAges.length;
-        return result;
+        return (double) sum / footballTeamAges.length;
     }
 }
+ 
