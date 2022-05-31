@@ -11,14 +11,13 @@ public class FromBigToSmallArray {
 
     public static void main(String[] args) throws IOException {
 
-        int[] bigArray = createArray(20);
         System.out.println(" Input array values: ");
-        fillArray(bigArray);
+        int[] bigArray = createAndFillArray(20);
         System.out.println("Big Array: ");
         printArray(bigArray);
 
-        int[] firstSmallArray = createArray(10);
-        int[] secondSmallArray = createArray(10);
+        int[] firstSmallArray = new int[10];
+        int[] secondSmallArray =new int[10];
 
         extractTheFirstSmallArray(bigArray, firstSmallArray);
 
@@ -33,12 +32,12 @@ public class FromBigToSmallArray {
         printArray(secondSmallArray);
 
 // проверяла как работает класс Array
-        System.out.println();
+        /*System.out.println();
         int[] numbersCopy2 = Arrays.copyOfRange(bigArray, 0,10);
         System.out.println(Arrays.toString(numbersCopy2));
 
         int[] numbersCopy = Arrays.copyOfRange(bigArray, 10,20);
-        System.out.println(Arrays.toString(numbersCopy));
+        System.out.println(Arrays.toString(numbersCopy));*/
 
     }
 
@@ -54,15 +53,12 @@ public class FromBigToSmallArray {
         }
     }
 
-    public static int[] createArray(int size) {
+    public static int[] createAndFillArray(int size) throws IOException {
         int[] array = new int[size];
-        return array;
-    }
-
-    public static void fillArray(int[] array) throws IOException {
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(READER.readLine());
         }
+        return array;
     }
 
     public static void printArray(int[] array) {

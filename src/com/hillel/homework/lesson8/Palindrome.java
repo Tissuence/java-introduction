@@ -26,14 +26,12 @@ public class Palindrome {
     }
 
     public static boolean isItPalindrome(char[] symbols) {
-        for (int i = 0, j = symbols.length - 1; i < symbols.length && j > 0 ; i++, j--) {
+        for (int i = 0, j = symbols.length - 1; i < symbols.length && j > 0; i++, j--) {
             if (symbols[i] != (symbols[j])) {
                 return false;
-            } else {
-                return true;
             }
         }
         return true;
     }
-
 }
+
