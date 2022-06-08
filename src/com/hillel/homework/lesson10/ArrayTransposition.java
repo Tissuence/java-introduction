@@ -10,40 +10,36 @@ public class ArrayTransposition {
 
     public static void main(String[] args) {
 
-        int[][] originalArray = createArray();
-        fillArray(originalArray);
+        System.out.println("Enter the quantity of columns:");
+        int columns = readNumber();
+        System.out.println("Enter the quantity of lines:");
+        int lines = readNumber();
+
+        int[][] originalArray = createAndFillArray(lines, columns);   
         printArray(originalArray, "Original array:");
 
         int[][] transposedArray = transposeArray(originalArray);
         printArray(transposedArray, " Transposed array:");
     }
 
-    public static int[][] createArray() {
+    public static int readNumber() {
         try {
-            System.out.println("Enter the quantity of columns:");
-            int columns = Integer.parseInt(READER.readLine());
-            System.out.println("Enter the quantity of lines:");
-            int lines = Integer.parseInt(READER.readLine());
-            int[][] array = new int[columns][lines];
-            return array;
+            return Integer.parseInt(READER.readLine());
         } catch (RuntimeException | IOException e) {
             System.out.println("incorrect input, try enter only numbers.");
-            return createArray();
+            return readNumber();
         }
     }
 
-    public static void fillArray(int[][] array) {
-        try {
-            for (int i = 0; i < array.length; i++) {
-                System.out.println("Enter numbers in " + (i + 1) + " line:");
-                for (int j = 0; j < array[i].length; j++) {
-                    array[i][j] = Integer.parseInt(READER.readLine());
-                }
+    public static int[][] createAndFillArray(int lines, int columns) {
+        int[][] array = new int[lines][columns];
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Enter numbers in " + (i + 1) + " line:");
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = readNumber();
             }
-        } catch (RuntimeException | IOException exception) {
-            System.out.println("Invalid input. Try again");
-            fillArray(array);
-        }
+        } return array;
     }
 
     public static void printArray(int[][] array, String message) {
