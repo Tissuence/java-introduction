@@ -1,15 +1,13 @@
 package com.hillel.homework.lesson12;
 
-import java.util.Arrays;
-
 public class PersonMain {
 
-    public static String[] namePool = new String[] {"Paolo", "Nick", "Jack", "Fernando", "Roberto", "Mike", "John", "Nikolas"};
-    public static String[] surnamePool = new String[] {"Jackson", "Wilson", "Dimopulas", "Vens", "Gamilton", "Brown", "Depp", "Jolie"};
+    public static String[] NAME_POOL = new String[] {"Paolo", "Nick", "Jack", "Fernando", "Roberto", "Mike", "John", "Nikolas"};
+    public static String[] SURNAME_POOL = new String[] {"Jackson", "Wilson", "Dimopulas", "Vens", "Gamilton", "Brown", "Depp", "Jolie"};
 
     public static void main(String[] args) {
 
-        Person[] poolOfPersons = Person.makePoolOfPerson(namePool, surnamePool);
+        Person[] poolOfPersons = Person.makePoolOfPerson(NAME_POOL, SURNAME_POOL);
         printArray(poolOfPersons);
     }
 
