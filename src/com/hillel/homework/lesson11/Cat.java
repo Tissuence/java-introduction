@@ -44,12 +44,4 @@ public class Cat {
         }
         return false;
     }
-
-   /* public boolean equalsCat(Cat cat, Cat cat1) {
-        if (cat.age == cat1.age && cat.weight == cat1.weight) {
-            System.out.println("Age and weight of cats is equals.");
-        }
-
-    }*/
-
 }

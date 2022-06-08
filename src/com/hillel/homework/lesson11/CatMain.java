@@ -13,7 +13,7 @@ public class CatMain {
     }
 
     public static String compareCats(Cat cat, Cat cat1) {
-       String answer =  (cat.age == cat1.age && cat.weight == cat1.weight) ? "Age and weight of " + cat.name + " and " + cat1.name  + " is equals." : "Age and weight of " + cat.name + " and " + cat1.name  + " is not equals.";
+       String answer =  (cat.equals(cat1)) ? "Age and weight of " + cat.name + " and " + cat1.name  + " is equals." : "Age and weight of " + cat.name + " and " + cat1.name  + " is not equals.";
         return answer;
     }
 }
