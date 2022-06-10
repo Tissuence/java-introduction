@@ -28,14 +28,16 @@ public class Human {
 
     @Override
     public String toString() {
-
-        String momInfo = this.mom.name != null ? mom.getName() : "";
-        String dadInfo = this.dad.name != null ? dad.getName() : "";
+        if (this.mom != null && this.dad != null) {
             return "Status: " + status + "\n" +
                     "Name: " + name + "\n" +
                     "Age: " + age + "\n" +
-                    "Mom: " + momInfo + "\n" +
-                    "Dad: " + dadInfo + "\n" + "\n";
-
+                    "Mom: " + mom.getName() + "\n" +
+                    "Dad: " + dad.getName() + "\n" + "\n";
+        } else {
+            return "Status: " + status + "\n" +
+                    "Name: " + name + "\n" +
+                    "Age: " + age + "\n" + "\n";
+        }
     }
 }
