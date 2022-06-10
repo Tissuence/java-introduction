@@ -4,12 +4,12 @@ public class Person {
 
     private final String name;
     private final String surname;
-    private final int age;
-    private final int weight;
-    private final int height;
+    private int age;
+    private int weight;
+    private int height;
 
-    public static String[] NAME_POOL = new String[] {"Paolo", "Nick", "Jack", "Fernando", "Roberto", "Mike", "John", "Nikolas"};
-    public static String[] SURNAME_POOL = new String[] {"Jackson", "Wilson", "Dimopulas", "Vens", "Gamilton", "Brown", "Depp", "Jolie"};
+    private static final String[] NAME_POOL = new String[] {"Paolo", "Nick", "Jack", "Fernando", "Roberto", "Mike", "John", "Nikolas"};
+    private static final String[] SURNAME_POOL = new String[] {"Jackson", "Wilson", "Dimopulas", "Vens", "Gamilton", "Brown", "Depp", "Jolie"};
 
     public Person(String name, String surname, int age, int weight, int height) {
         this.name = name;
@@ -29,7 +29,7 @@ public class Person {
                 " сm";
     }
 
-    public static Person[] makePoolOfPerson(String[] NAME_POOL, String[] SURNAME_POOL) {
+    public static Person[] makePoolOfPerson() {
         int minAge = 18;
         int maxAge = 90;
         int minWeight = 50;

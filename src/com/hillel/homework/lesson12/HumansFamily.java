@@ -8,12 +8,12 @@ public class HumansFamily {
         Human dad = new Human("Dad", "Ivan", 38, null, grandfather2);
         Human child = new Human("Daughter", "Oksana",12, mom, dad);
 
-        Object[] family = new Object[]{child, mom, dad, grandmother1, grandfather2};
+        Human[] family = new Human[]{child, mom, dad, grandmother1, grandfather2};
         printArray(family);
     }
 
-    private static void printArray(Object[] family) {
-        for (Object human : family) {
+    private static void printArray(Human[] family) {
+        for (Human human : family) {
             System.out.print(human);
         }
     }
