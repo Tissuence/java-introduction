@@ -1,20 +1,20 @@
 package com.hillel.homework.lesson12;
-
-import java.util.ArrayList;
-
 public class HumansFamily {
 
     public static void main(String[] args) {
 
-        ArrayList family = new ArrayList(3);
-        family.add(new Human("Mom", "Maria", 34));
-        family.add(new Human("Dad", "Ivan", 38));
-        family.add(new Human("Daughter", "Oksana", 12));
+        Human child = new Human("Daughter", "Oksana", 12);
+        Human.Mom mom = child.new Mom("Mom", "Maria", 34);
+        Human.Dad dad = child.new Dad("Dad", "Ivan", 38);
 
-        printArrayList(family);
+        Object[] family = new Object[]{child, mom, dad};
+        printArray(family);
+
+     //   family.add(new Human.Mom("Mom", "Maria", 34)); буде питання
+     //  family.add(new Human("Daughter", "Oksana", 12));
     }
 
-    private static void printArrayList(ArrayList family) {
+    private static void printArray(Object[] family) {
         for (Object human : family) {
             System.out.print(human);
         }
