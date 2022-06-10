@@ -1,6 +1,5 @@
 package com.hillel.homework.lesson12;
 
-import java.util.ArrayList;
 
 public class HumansFamily {
 
