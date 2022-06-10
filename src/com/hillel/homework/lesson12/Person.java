@@ -8,6 +8,9 @@ public class Person {
     private final int weight;
     private final int height;
 
+    public static String[] NAME_POOL = new String[] {"Paolo", "Nick", "Jack", "Fernando", "Roberto", "Mike", "John", "Nikolas"};
+    public static String[] SURNAME_POOL = new String[] {"Jackson", "Wilson", "Dimopulas", "Vens", "Gamilton", "Brown", "Depp", "Jolie"};
+
     public Person(String name, String surname, int age, int weight, int height) {
         this.name = name;
         this.surname = surname;

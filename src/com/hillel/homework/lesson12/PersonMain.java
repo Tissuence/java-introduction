@@ -1,9 +1,9 @@
 package com.hillel.homework.lesson12;
 
-public class PersonMain {
+import static com.hillel.homework.lesson12.Person.NAME_POOL;
+import static com.hillel.homework.lesson12.Person.SURNAME_POOL;
 
-    public static String[] NAME_POOL = new String[] {"Paolo", "Nick", "Jack", "Fernando", "Roberto", "Mike", "John", "Nikolas"};
-    public static String[] SURNAME_POOL = new String[] {"Jackson", "Wilson", "Dimopulas", "Vens", "Gamilton", "Brown", "Depp", "Jolie"};
+public class PersonMain {
 
     public static void main(String[] args) {
 
