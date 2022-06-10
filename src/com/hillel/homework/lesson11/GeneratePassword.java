@@ -10,7 +10,7 @@ public class GeneratePassword {
 
     public static void main(String[] args) {
 
-        String password = shufflePassword(generatePassword());
+        String password = generatePassword();
         System.out.println(password);
     }
 
