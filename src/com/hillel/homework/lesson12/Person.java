@@ -29,7 +29,7 @@ public class Person {
                 " сm";
     }
 
-    public static Person[] makePoolOfPerson(String[] namePool, String[] surnamePool) {
+    public static Person[] makePoolOfPerson(String[] NAME_POOL, String[] SURNAME_POOL) {
         int minAge = 18;
         int maxAge = 90;
         int minWeight = 50;
@@ -39,8 +39,8 @@ public class Person {
         Person[] persons = new Person[100];
 
         for (int i = 0; i < 100; i++) {
-            String name = namePool[(int) (Math.random() * 8)];
-            String surname = surnamePool[(int) (Math.random() * 8)];
+            String name = NAME_POOL[(int) (Math.random() * 8)];
+            String surname = SURNAME_POOL[(int) (Math.random() * 8)];
             int age = (int) (Math.random() * (maxAge - minAge) + minAge);
             int weight = (int) (Math.random() * (maxWeight - minWeight) + minWeight);
             int height = (int) (Math.random() * (maxHeight - minHeight) + minHeight);
