@@ -1,8 +1,5 @@
 package com.hillel.homework.lesson12;
-
-
 public class HumansFamily {
-
     public static void main(String[] args) {
 
         Human grandfather1 = new Human("Grandfather", "Panas", 82);

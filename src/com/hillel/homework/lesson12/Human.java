@@ -28,7 +28,7 @@ public class Human {
 
     @Override
     public String toString() {
-        if (this.mom != null && this.dad != null) {
+        if (this.mom != null || this.dad != null) {
             return "Status: " + status + "\n" +
                     "Name: " + name + "\n" +
                     "Age: " + age + "\n" +
