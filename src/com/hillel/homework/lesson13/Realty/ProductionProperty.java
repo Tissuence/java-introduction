@@ -1,6 +1,4 @@
-package com.hillel.homework.lesson13;
-
-import java.io.IOException;
+package com.hillel.homework.lesson13.Realty;
 
 public class ProductionProperty extends Realty {
 
