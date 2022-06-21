@@ -1,6 +1,4 @@
-package com.hillel.homework.lesson13.CoffeeMachine;
-
-import com.hillel.homework.lesson13.CoffeeMachine.Drink;
+package com.hillel.homework.lesson13.coffeemachine;
 
 public class Tea extends Drink {
 

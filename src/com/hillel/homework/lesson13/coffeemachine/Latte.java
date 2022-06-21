@@ -1,4 +1,4 @@
-package com.hillel.homework.lesson13.CoffeeMachine;
+package com.hillel.homework.lesson13.coffeemachine;
 
 public class Latte extends Drink {
 

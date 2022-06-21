@@ -1,6 +1,6 @@
-package com.hillel.homework.lesson13.CoffeeMachine;
+package com.hillel.homework.lesson13.coffeemachine;
 
-public class Cappuccino extends Drink{
+public class Cappuccino extends Drink {
 
     public Cappuccino(String name, int price) {
         super(name, price);

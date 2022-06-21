@@ -1,4 +1,4 @@
-package com.hillel.homework.lesson13.CoffeeMachine;
+package com.hillel.homework.lesson13.coffeemachine;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,10 +7,11 @@ import java.util.ArrayList;
 
 public class CoffeeMachine {
     public static BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
-   static int AMERICANO_PRICE = 25;
+    static int AMERICANO_PRICE = 25;
     static int LATTE_PRICE = 40;
-   static int CAPPUCCINO_PRICE = 45;
-   static int TEA_PRICE = 20;
+    static int CAPPUCCINO_PRICE = 45;
+    static int TEA_PRICE = 20;
+
     public static void main(String[] args) throws InterruptedException, IOException {
         ArrayList<Drink> order = new ArrayList<>();
         makeOrderListOFDrinks(order);
@@ -19,7 +20,6 @@ public class CoffeeMachine {
     }
 
     public static void makeOrderListOFDrinks(ArrayList<Drink> order) throws IOException {
-
         do {
             System.out.println("Choose number of drink: " + "\n" + "Americano - 1" +
                     "\n" + "Latte - 2" + "\n" + "Cappuccino - 3" + "\n" + "Tea - 4");
@@ -39,7 +39,8 @@ public class CoffeeMachine {
             case 2 -> drink = new Latte("Latte", LATTE_PRICE);
             case 3 -> drink = new Cappuccino("Cappuccino", CAPPUCCINO_PRICE);
             case 4 -> drink = new Tea("Tea", TEA_PRICE);
-        } return drink;
+        }
+        return drink;
     }
 
     private static int readNumberFromConsole() {

@@ -1,19 +1,12 @@
-package com.hillel.homework.lesson13.CoffeeMachine;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
+package com.hillel.homework.lesson13.coffeemachine;
 
 public class Drink {
-
-    public Drink() {
-    }
 
     private String name;
     private int price;
 
+    public Drink() {
+    }
 
     public Drink(String name, int price) {
         this.name = name;
@@ -33,5 +26,4 @@ public class Drink {
         System.out.println("Your drink is preparing...");
         Thread.sleep(1000);
     }
-
 }
