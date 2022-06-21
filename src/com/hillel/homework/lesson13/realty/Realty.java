@@ -4,15 +4,16 @@ public class Realty {
 
     protected double area;
     protected String name;
-    protected static double DEFAULT_TAX_RATE_PER_ONE_SQUARE_METER = 43.5;
+    protected double defaultTaxRatePerOneSquareMeter;
 
-    protected Realty(double area, String name) {
+    protected Realty(double area, String name, double defaultTaxRatePerOneSquareMeter ) {
         this.area = area;
         this.name = name;
+        this.defaultTaxRatePerOneSquareMeter = defaultTaxRatePerOneSquareMeter;
     }
 
     public double calculateTax() {
-        double calculatedTax = this.area * DEFAULT_TAX_RATE_PER_ONE_SQUARE_METER;
+        double calculatedTax = this.area * defaultTaxRatePerOneSquareMeter;
         return calculatedTax;
     }
 

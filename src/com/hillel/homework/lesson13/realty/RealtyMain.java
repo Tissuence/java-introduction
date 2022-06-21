@@ -8,19 +8,21 @@ import java.util.ArrayList;
 public class RealtyMain {
 
     public static BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
+    public static int TAXABLE_REVENUE_BOTTOM_LINE = 100;
 
     public static void main(String[] args) throws IOException {
         ArrayList<Realty> allRealty = new ArrayList<>();
+        System.out.println("Input Tax rate per 1m²:");
+        double defaultTaxRatePerOneSquareMeter = Integer.parseInt(READER.readLine());
         System.out.println("Input your subsidy interest rate:");
         double subsidy = Integer.parseInt(READER.readLine());
         System.out.println("Input your revenue volume:");
         double revenue = Integer.parseInt(READER.readLine());
-        System.out.println("Input your Taxable revenue bottom line:");
-        int taxableRevenueBottomLine =  Integer.parseInt(READER.readLine());
 
-        allRealty.add(new ResidentialProperty(readFromConsole(), subsidy, "Residential Property"));
-        allRealty.add(new RetailProperty(readFromConsole(), revenue, taxableRevenueBottomLine,"Retail Property"));
-        allRealty.add(new ProductionProperty(readFromConsole(), "Production Property"));
+
+        allRealty.add(new ResidentialProperty(readFromConsole(), subsidy, defaultTaxRatePerOneSquareMeter, "Residential Property"));
+        allRealty.add(new RetailProperty(readFromConsole(), revenue, TAXABLE_REVENUE_BOTTOM_LINE, defaultTaxRatePerOneSquareMeter, "Retail Property"));
+        allRealty.add(new ProductionProperty(readFromConsole(), defaultTaxRatePerOneSquareMeter, "Production Property"));
 
         printAllCalculatedTaxes(allRealty);
     }

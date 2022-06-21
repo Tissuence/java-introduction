@@ -4,8 +4,8 @@ public class ResidentialProperty extends Realty {
 
     double subsidyInterestRate;
 
-    public ResidentialProperty(double area, double subsidyInterestRate, String name) {
-        super(area, name);
+    public ResidentialProperty(double area, double subsidyInterestRate, double defaultTaxRatePerOneSquareMeter, String name) {
+        super(area, name, defaultTaxRatePerOneSquareMeter);
         this.subsidyInterestRate = subsidyInterestRate;
     }
 
