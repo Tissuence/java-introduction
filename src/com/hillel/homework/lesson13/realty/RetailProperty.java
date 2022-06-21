@@ -3,18 +3,19 @@ package com.hillel.homework.lesson13.realty;
 import java.io.IOException;
 
 public class RetailProperty extends Realty {
-    private static int TAXABLE_REVENUE_BOTTOM_LINE = 100;
+    protected int taxableRevenueBottomLine;
     double revenue;
 
-    public RetailProperty(double area, double revenue) {
-        super(area);
+    public RetailProperty(double area, double revenue, int taxableRevenueBottomLine, String name) {
+        super(area, name);
         this.revenue = revenue;
+        this.taxableRevenueBottomLine = taxableRevenueBottomLine;
     }
 
-        public double calculateTax() {
-            if (revenue > TAXABLE_REVENUE_BOTTOM_LINE) {
-                return super.calculateTax();
-            }
-            return 0.0;
+    public double calculateTax() {
+        if (revenue > taxableRevenueBottomLine) {
+            return super.calculateTax();
         }
+        return 0.0;
     }
+}
