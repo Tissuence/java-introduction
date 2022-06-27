@@ -1,13 +1,12 @@
 package com.hillel.homework.lesson14;
 
-public class Fahrenheit extends Degrees {
+public class Fahrenheit implements Convertible {
 
-    public Fahrenheit(double degrees, String name) {
-        super(degrees, name);
+    public Fahrenheit(String name) {
     }
 
     @Override
-    public double convert() {
-        return super.convert() * 9 / 5 + 32;
+    public double convert(double degrees) {
+        return degrees * 9 / 5 + 32;
     }
 }
