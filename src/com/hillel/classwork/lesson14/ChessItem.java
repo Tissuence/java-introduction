@@ -1,6 +1,6 @@
 package com.hillel.classwork.lesson14;
 
-public abstract class ChessItem {
+public abstract class ChessItem implements Drawable {
 
     protected int x, y;
     protected int value;
@@ -8,6 +8,5 @@ public abstract class ChessItem {
     public int getValue() {
         return value;
     }
-
-    public abstract void draw();
 }
+
