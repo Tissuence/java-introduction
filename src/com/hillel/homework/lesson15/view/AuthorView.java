@@ -1,15 +1,11 @@
 package com.hillel.homework.lesson15.view;
 
-import com.hillel.homework.lesson15.ActionType;
-import com.hillel.homework.lesson15.controller.AuthorController;
 import com.hillel.homework.lesson15.model.Author;
 import com.hillel.homework.lesson15.utils.Validator;
 
 import java.io.IOException;
-import java.util.List;
 
 import static com.hillel.homework.lesson15.controller.AuthorController.AUTHORS;
-import static com.hillel.homework.lesson15.controller.AuthorController.READER;
 
 public class AuthorView {
     String title;
@@ -19,26 +15,26 @@ public class AuthorView {
 
     public Author createAuthor() throws IOException {
         Author author = new Author();
-        title = "Введіть ім'я автора:";
-        System.out.println(title);
+        System.out.println("Введіть ім'я автора:");
         author.setName(Validator.validateInputText());
-        title = "Введіть прізвище автора:";
-        System.out.println(title);
+        System.out.println("Введіть прізвище автора:");
         author.setSurname(Validator.validateInputText());
         return author;
     }
 
-    public static void printAuthors(List<Author> AUTHORS) {
+    public void printAuthors() {
         for (int i = 0; i < AUTHORS.size(); i++) {
             System.out.println(i + 1 + "." + AUTHORS.get(i));
+        }
+        if (AUTHORS.isEmpty()) {
+            System.out.println("Список пустий!");
         }
     }
 
     public int chooseIndexOfAuthor() throws IOException {
-        title = "Оберiть номер автора якого ви бажаэте видалити";
+        title = "Введіть номер автора,y якого ви бажаєте обрати";
         System.out.println(title);
-        printAuthors(AUTHORS);
-        int index = Validator.validateIndex(AUTHORS.size());
-        return index;
+        printAuthors();
+        return Validator.validateIndex(AUTHORS.size());
     }
 }

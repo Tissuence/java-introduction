@@ -1,12 +1,8 @@
 package com.hillel.homework.lesson15.model;
 
-import java.util.ArrayList;
-
 public class Author {
-
     private String surname;
     private String name;
-    private ArrayList<Book> books;
 
     public Author() {
     }
@@ -16,16 +12,8 @@ public class Author {
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public ArrayList<Book> getBooks() {
-        return books;
     }
 
     public void setSurname(String surname) {
@@ -34,10 +22,6 @@ public class Author {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public void setBooks(ArrayList<Book> books) {
-        this.books = books;
     }
 
     @Override

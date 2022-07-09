@@ -5,14 +5,11 @@ import com.hillel.homework.lesson15.model.Author;
 import com.hillel.homework.lesson15.view.AuthorView;
 import com.hillel.homework.lesson15.view.MainView;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AuthorController {
-    public static BufferedReader READER = new BufferedReader(new InputStreamReader(System.in));
     public static List<Author> AUTHORS = new ArrayList<>();
     AuthorView authorView;
     MainView mainView;
@@ -21,16 +18,22 @@ public class AuthorController {
         this.mainView = new MainView();
     }
     public void chooseAuthorAction() throws IOException {
-        ActionType type = mainView.chooseAction();
+        ActionType type = mainView.chooseAction("Автора");
         switch (type) {
             case ADD:
-                AUTHORS.add(authorView.createAuthor());
-                System.out.println("Log: Автора додано до списку.");
+                addAuthor();
                 break;
             case DELETE:
                 AUTHORS.remove(authorView.chooseIndexOfAuthor());
+                break;
             case PRINT:
-                authorView.printAuthors(AUTHORS);
+                authorView.printAuthors();
+                break;
         }
+    }
+
+    public void addAuthor() throws IOException {
+        AUTHORS.add(authorView.createAuthor());
+        System.out.println("Log: Автора додано до списку.");
     }
 }

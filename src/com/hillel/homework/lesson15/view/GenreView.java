@@ -1,34 +1,39 @@
 package com.hillel.homework.lesson15.view;
 
-import com.hillel.homework.lesson15.model.Author;
 import com.hillel.homework.lesson15.model.Genre;
 import com.hillel.homework.lesson15.utils.Validator;
 
 import java.io.IOException;
-import java.util.List;
+
+import static com.hillel.homework.lesson15.controller.AuthorController.AUTHORS;
+import static com.hillel.homework.lesson15.controller.GenreController.GENRES;
 
 public class GenreView {
 
-    Genre genre;
-    String title;
-
-    public GenreView(Genre genre) {
-        this.genre = genre;
+    public GenreView() {
     }
 
-    public void getGenreInput() throws IOException {
-      title = "Введіть назву жанру:";
-        System.out.println(title);
+    public Genre createGenre() throws IOException {
+        Genre genre = new Genre();
+        System.out.println("Введіть назву жанру:");
         genre.setName(Validator.validateInputText());
-        title = "Введіть назву жанру:";
-        System.out.println(title);
+        System.out.println("Введіть опис жанру:");
         genre.setDescription(Validator.validateInputText());
+        return genre;
     }
 
-    public static void printGenres(List<Author> GENRES) {
+    public void printGenres() {
         for (int i = 0; i < GENRES.size(); i++) {
-            System.out.println(i + "." + GENRES.get(i));
-
+            System.out.println(i + 1 + "." + GENRES.get(i));
         }
+        if (GENRES.isEmpty()) {
+            System.out.println("Список пустий!");
+        }
+    }
+
+    public int chooseIndexOfGenre() throws IOException {
+        System.out.println("Введіть номер жанру який ви бажаєте обрати");
+        printGenres();
+        return Validator.validateIndex(GENRES.size());
     }
 }
