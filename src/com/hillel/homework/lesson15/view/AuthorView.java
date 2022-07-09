@@ -1,5 +1,7 @@
 package com.hillel.homework.lesson15.view;
+
 import com.hillel.homework.lesson15.ActionType;
+import com.hillel.homework.lesson15.controller.AuthorController;
 import com.hillel.homework.lesson15.model.Author;
 import com.hillel.homework.lesson15.utils.Validator;
 
@@ -28,20 +30,15 @@ public class AuthorView {
 
     public static void printAuthors(List<Author> AUTHORS) {
         for (int i = 0; i < AUTHORS.size(); i++) {
-            System.out.println(i + "." + AUTHORS.get(i));
+            System.out.println(i + 1 + "." + AUTHORS.get(i));
         }
     }
 
-    public ActionType chooseAction() {
-        System.out.println("Введіть ADD - щоб додати автора" + '\n' + "DELETE - видалити серед існуючих"
-                + '\n' + "PRINT - вивести весь список авторів");
-        ActionType actionType;
-       try {
-           actionType = ActionType.valueOf(READER.readLine());
-       } catch (Exception exception) {
-           return chooseAction();
-       }
-        return actionType;
+    public int chooseIndexOfAuthor() throws IOException {
+        title = "Оберiть номер автора якого ви бажаэте видалити";
+        System.out.println(title);
+        printAuthors(AUTHORS);
+        int index = Validator.validateIndex(AUTHORS.size());
+        return index;
     }
-
 }
