@@ -8,7 +8,6 @@ import java.io.IOException;
 import static com.hillel.homework.lesson15.controller.AuthorController.AUTHORS;
 
 public class AuthorView {
-    String title;
 
     public AuthorView() {
     }
@@ -32,8 +31,7 @@ public class AuthorView {
     }
 
     public int chooseIndexOfAuthor() throws IOException {
-        title = "Введіть номер автора,y якого ви бажаєте обрати";
-        System.out.println(title);
+        System.out.println("Введіть номер автора,y якого ви бажаєте обрати");
         printAuthors();
         return Validator.validateIndex(AUTHORS.size());
     }

@@ -5,7 +5,6 @@ import com.hillel.homework.lesson15.utils.Validator;
 
 import java.io.IOException;
 
-import static com.hillel.homework.lesson15.controller.AuthorController.AUTHORS;
 import static com.hillel.homework.lesson15.controller.GenreController.GENRES;
 
 public class GenreView {

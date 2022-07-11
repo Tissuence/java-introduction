@@ -5,8 +5,8 @@ public class Book {
     private String name;
     private String description;
     private int year;
-    Genre genre;
-    Author author;
+    private Genre genre;
+   private Author author;
 
     public Book() {
     }
