@@ -43,10 +43,10 @@ public class BookController {
 
     private void addBook() throws IOException {
         if (GENRES.isEmpty()) {
-          genreController.addGenre();
+            genreController.addGenre();
         }
         if (AUTHORS.isEmpty()) {
-          authorController.addAuthor();
+            authorController.addAuthor();
         }
         BOOKS.add(bookView.createBook());
         System.out.println("Log: Книжку додано до списку.");

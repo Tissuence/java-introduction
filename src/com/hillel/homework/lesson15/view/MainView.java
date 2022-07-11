@@ -20,7 +20,7 @@ public class MainView {
     }
 
     public ActionType chooseAction(String message) {
-        System.out.println("Введіть Add - щоб додати " + message +'\n' + "Delete - видалити " + message + " серед існуючих"
+        System.out.println("Введіть Add - щоб додати " + message + '\n' + "Delete - видалити " + message + " серед існуючих"
                 + '\n' + "Print - вивести весь список");
         ActionType actionType;
         try {

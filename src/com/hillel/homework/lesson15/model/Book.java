@@ -6,7 +6,7 @@ public class Book {
     private String description;
     private int year;
     private Genre genre;
-   private Author author;
+    private Author author;
 
     public Book() {
     }
@@ -14,18 +14,23 @@ public class Book {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public void setDescription(String description) {
         this.description = description;
     }
+
     public void setYear(int year) {
         this.year = year;
     }
+
     public void setGenre(Genre genre) {
         this.genre = genre;
     }
+
     public void setAuthor(Author author) {
         this.author = author;
     }
